@@ -4,6 +4,7 @@
 
 ![MIT License](https://badgen.net/badge/license/MIT/blue "MIT License")
 [![view on npm](https://img.shields.io/npm/v/svelte-mindmap.svg?colorB=red)](https://www.npmjs.com/package/svelte-mindmap)
+ [![Svelte v3](https://img.shields.io/badge/svelte-v3-blueviolet.svg)](https://svelte.dev)
 
 
 
@@ -107,6 +108,7 @@ Here's a list of all CSS classes for styling:
 
 - **.mindmap-svg**: main `svg` element containing the map;
 - **.mindmap-node**: `foreignObject` element representing a node;
+- **.mindmap-node-div**: `div` element inside the `foreignObject` element representing a node;
 - **.mindmap-node--editable**: `foreignObject` element representing a node in editor mode;
 - **.mindmap-subnode-group-text**: `foreignObject` element containing all subnodes of a given node;
 - **.mindmap-subnode-text**: `div` element containing a subnode;

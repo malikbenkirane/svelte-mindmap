@@ -8,16 +8,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/heithemmoumni/svelte-mindmap.git"
+    "url": "git+https://github.com/malikbenkirane/svelte-mindmap.git"
   },
   "keywords": [
     "svelte",
     "mindmap"
   ],
-  "author": "Heithem Moumni <moumniheithem@gmail.com>",
+  "author": "Heithem Moumni <moumniheithem@gmail.com>, Malik Benkirane <freemalikbenkirane@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/heithemmoumni/svelte-mindmap/issues"
+    "url": "https://github.com/malikbenkirane/svelte-mindmap/issues"
   },
-  "homepage": "https://github.com/heithemmoumni/svelte-mindmap#readme"
+  "homepage": "https://github.com/malikbenkirane/svelte-mindmap#readme"
 }
