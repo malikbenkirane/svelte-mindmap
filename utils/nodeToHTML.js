@@ -1,4 +1,5 @@
 import { categoryToIMG } from '../parser/emojis'
+import { Converter } from 'showdown'
 
 /*
  * Return the HTML representation of a node.
@@ -17,5 +18,13 @@ export default (node) => {
     emoji = ''
   }
 
-  return `<a id="node-${node.index}" ${href}><div class='mindmap-node-div'>${node.text || ''} ${emoji}</div></a>`
+  if node.markdown {
+    const conv = new Converter()
+    node.markdown = conv.makeHtml(node.markdown)
+  }
+
+  return `<div>
+    <a class="minmap-node-title" id="node-${node.index}" ${href}>${node.text || ''} ${emoji}</a>
+    ${node.markdown || ''}
+    </div>`
 }
