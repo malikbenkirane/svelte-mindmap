@@ -1,4 +1,4 @@
-import { Converter } from 'showdown';
+import showdown from 'showdown';
 import { categoryToIMG } from '../parser/emojis';
 
 /*
@@ -20,7 +20,7 @@ export default (node) => {
 
   let markdownHTML;
   if (node.markdown) {
-    const conv = new Converter();
+    const conv = new showdown.Converter();
     markdownHTML = conv.makeHtml(node.markdown);
   }
 
