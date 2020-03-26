@@ -22,6 +22,20 @@
   import nodeToHTML from "./utils/nodeToHTML";
   import { onMount, beforeUpdate, afterUpdate } from "svelte";
 
+  import { store } from "./store.js";
+
+  $: while (!actionStore.done()) {
+    let nextAction = actionStore.next();
+    switch (nextAction) {
+      case 'addNode':
+        handleAddNode();
+        break;
+      default:
+        console.log(`Unknown action ${nextAction}`)
+        break;
+    }
+  }
+
   export let editable = false;
   export let _simulation = null;
 
@@ -30,6 +44,16 @@
     nodes: [],
     connections: []
   };
+
+  let numberOfNodes = map.nodes.length
+  let numberOfConnecitons = map.nodes.connections
+
+  $: map.nodes = $store.nodes;
+  $: map.connections = $store.connections;
+  $: if ($store.needToRender) {
+    renderMap();
+    store.renderDone();
+  }
 
   let mountPoint;
 
@@ -83,7 +107,6 @@
   /**
    * Render mind map unsing D3
    */
-
   function renderMap() {
     const svg = select(mountPoint);
 

@@ -5,6 +5,7 @@
   "main": "MindMap.svelte",
   "dependencies": {
     "d3": "^5.13.1",
+    "immer": "^6.0.2",
     "showdown": "^1.9.1"
   },
   "repository": {
